@@ -1,6 +1,18 @@
-# Modèle de user story et de critères d’acceptation
+# Modèle de parcours, de user story et de critères d’acceptation
 
-## 1. User story
+## 1. Parcours
+
+Un parcours décrit, étape par étape, une utilisation de l’application du début à la fin, et qui agit à chaque étape : l’utilisateur, l’application ou un service extérieur. Il décrit ce que fait chacun, pas comment c’est programmé.
+
+| Étape | Qui | Fait quoi |
+| :---: | --- | --- |
+| 1, 2, 3… | L’utilisateur, l’application ou un service | Une action ou une réponse, du point de vue de l’usage |
+
+Voir le parcours de l’[exemple de la médiathèque](#parcours).
+
+---
+
+## 2. User story
 
 Une user story décrit un besoin du point de vue de la personne qui utilise l’application.
 
@@ -14,7 +26,7 @@ Une user story décrit un besoin du point de vue de la personne qui utilise l’
 
 ---
 
-## 2. Critères d’acceptation
+## 3. Critères d’acceptation
 
 Un critère d’acceptation précise quand la user story est satisfaite. Il est rédigé pour qu’un essai sur l’application terminée dise sans interprétation s’il est respecté. Il se décrit en trois parties selon la méthode Gherkin (en anglais : « Given… When… Then… »).
 
@@ -27,7 +39,7 @@ Un critère d’acceptation précise quand la user story est satisfaite. Il est 
 
 ---
 
-## 3. Exemple : la salle de réunion de la médiathèque
+## 4. Exemple : la salle de réunion de la médiathèque
 
 La mairie prête la salle de réunion de sa médiathèque (19 places, usage administratif) à la demi-journée ou à la journée. Aujourd’hui, la réservation se fait par un formulaire papier déposé en mairie.
 
