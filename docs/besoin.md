@@ -17,7 +17,7 @@
 - *30 s.*
 - Opération(s) interdite(s) ? 
 - *Modifier et écraser les fiches.*
-- Taille maximum d'une fiche ? 
+- Taille maximum d'une fiche ?
 - *20 ko.*
 - Consommation de jetons ? 
 - *Oui, à raison de 60 000 jetons/session et 10 appels/session.*
@@ -51,7 +51,7 @@
 - La fiche technique existe déjà ; le technicien peut l'utiliser pour la donner au client.
 - La fiche technique n'existe pas ; le technicien fait appel au service d'IA pour en générer une nouvelle.
 - La nouvelle fiche technique est créée, alors il faut la faire valider par un technicien.
-- Une réponse peut être complexe ; quand elle demande plusieurs sources, le service d'IA peut se servir de plusieurs fiches.
+
 ## Objectifs d’accessibilité
 - L'assistant est conçu pour être utilisé lorsqu'un technicien est en situation de handicap.
 - Pas de messages éphémères.
