@@ -41,19 +41,21 @@
 - En tant que service d'IA, je veux pouvoir recevoir et transmettre au CLI mes connaissances basées sur les fiches existantes.
 - En tant que CLI, je veux pouvoir recevoir des informations de la part du service d'IA et pouvoir créer de nouvelles fiches.
 ## Critères d’acceptation
-- Le format de la fiche technique est vérifié, son format est *markdown*, alors la demande est valide.
-- La nomenclature est respectée, elle est en kebab-case, alors la demande est valide.
-- Le CLI respecte des conventions d'accessibilité, par exemple il supporte la lecture d'écran, alors l'assistant est accessible.
-- L'assistant répond rapidement quand la réponse met au maximum 30 s pour venir, alors le cahier des charges est respecté.
-- Le service d'IA est en lecture seule ; quand il ne peut pas écraser ou modifier un fichier, alors le cahier des charges est respecté.
-- Le poids d'une fiche est léger quand il est inférieur ou égal à 20 ko, alors la fiche est conservée.
-- Les appels au service d'IA sont limités quand on dispose de 60 k jetons maximum par session, alors le technicien est averti.
-- La fiche technique existe déjà ; le technicien peut l'utiliser pour la donner au client.
-- La fiche technique n'existe pas ; le technicien fait appel au service d'IA pour en générer une nouvelle.
-- La nouvelle fiche technique est créée, alors il faut la faire valider par un technicien.
-- Une réponse peut être complexe ; quand elle demande plusieurs sources, le service d'IA peut se servir de plusieurs fiches.
+- Etant donné un technicien authentifié; quand il lance une commande ou écris un message alors il communique avec le service d'IA via le CLI en affichant un indicateur statique
+- Etant donné un technicien authentifié, quand j'utilise le service il via CLI, alors il est dans la plage 9h-17h
+- Etant donné un fichier, alors il est valide quand son poids est égal ou en dessous de 20 ko
+- Etant donné que le technicien communique avec le service IA via CLI, quand il utilise le CLI, alors il a le droit à max 10 appels
+- Etant donné une requête envoyée au service IA, quand cette dernière dure plus de 30 secondes, alors n'est pas valide et est refusée
+- Etant donné une certaine nomenclature, quand les fiches sont lues ou écrites, alors ces fichiers sont nommés en kebab case
+- Etant donné une requête, quand cette dernière essaie d'explorer hors du fichier de travail, alors elle est refusée
+- Etant donné un technicien authentifié, quand celui-ci a des éléments secrets comme clé api, alors le fichier .env est jamais push et est couvert par gitignore
+- Etant donné une consommation de jetons, quand celle-ci est égale à 60000 ou audessus, alors les requêtes sont refusées 
+- Etant donné la création d'une nouvelle fiche, quand celle-ci est sur le point d'être écrasée alors il y a une demande de confirmation dans le terminal
+- Etant donné une requête vide quand celle-ci ne contient rien ou que des espaces, alors il y a un retour de message d'erreur
+
 ## Objectifs d’accessibilité
 - L'assistant est conçu pour être utilisé lorsqu'un technicien est en situation de handicap.
 - Pas de messages éphémères.
 - Les informations cruciales ne sont pas transmises uniquement par la couleur.
+- Pas d'animations
 - Commande --help avec documentation.
